@@ -1,38 +1,17 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-title>
-     Home
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-img src="https://media-exp1.licdn.com/dms/image/C4E03AQH7LUUvWqX9iQ/profile-displayphoto-shrink_800_800/0/1528900411169?e=1650499200&v=beta&t=LTCMo25twwlBGLe7KV-9iTHA0z-kgzOdh1fq-P-6nP0">
-    </ion-img>
-      <ion-card-header>
-        <ion-card-title>Assem's Activity</ion-card-title>
-      </ion-card-header>
+<ion-content>
+  <ion-card button *ngFor="let activity of (activityList | async)">
+    <ion-img [src]="activity.cropped"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{activity.name}}</ion-card-title>
+    </ion-card-header>
   </ion-card>
-  <ion-card>
-    <ion-img src="https://media-exp1.licdn.com/dms/image/C4E03AQH7LUUvWqX9iQ/profile-displayphoto-shrink_800_800/0/1528900411169?e=1650499200&v=beta&t=LTCMo25twwlBGLe7KV-9iTHA0z-kgzOdh1fq-P-6nP0">
-    </ion-img>
-      <ion-card-header>
-        <ion-card-title>Assem's Activity</ion-card-title>
-      </ion-card-header>
-  </ion-card>
-   <ion-card>
-    <ion-img src="https://media-exp1.licdn.com/dms/image/C4E03AQH7LUUvWqX9iQ/profile-displayphoto-shrink_800_800/0/1528900411169?e=1650499200&v=beta&t=LTCMo25twwlBGLe7KV-9iTHA0z-kgzOdh1fq-P-6nP0">
-    </ion-img>
-      <ion-card-header>
-        <ion-card-title>Assem's Activity</ion-card-title>
-      </ion-card-header>
-  </ion-card>
-  <ion-card>
-    <ion-img src="https://media-exp1.licdn.com/dms/image/C4E03AQH7LUUvWqX9iQ/profile-displayphoto-shrink_800_800/0/1528900411169?e=1650499200&v=beta&t=LTCMo25twwlBGLe7KV-9iTHA0z-kgzOdh1fq-P-6nP0">
-    </ion-img>
-      <ion-card-header>
-        <ion-card-title>Assem's Activity</ion-card-title>
-      </ion-card-header>
-  </ion-card>
+
 </ion-content>
