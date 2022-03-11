@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ActivityService } from '../activity.service';
 import { Activity } from '../types';
+import { ActivityService } from '../activity.service';
 
 @Component({
   selector: 'app-tab1',
@@ -11,8 +11,10 @@ import { Activity } from '../types';
 export class Tab1Page {
   activityList: Observable<Activity[]>;
 
-  constructor(activityService: ActivityService) {
-    this.activityList = activityService.getAllActivities();
+  constructor(activityService: ActivityService){
+    setTimeout(()=> {
+      this.activityList = activityService.getAllActivities();
+    }, 3000);
   }
 
 }
