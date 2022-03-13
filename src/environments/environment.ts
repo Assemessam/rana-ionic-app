@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase:{
+    apiKey: "AIzaSyAndc6D2MdoowbXUIO4oo-h4kti-yLKZYQ",
+    authDomain: "rana-ionic-app.firebaseapp.com",
+    projectId: "rana-ionic-app",
+    storageBucket: "rana-ionic-app.appspot.com",
+    messagingSenderId: "609924385121",
+    appId: "1:609924385121:web:735621cfdfbab7b3ed1d20",
+    measurementId: "G-WK08D61EMW"
+  }
 };
 
 /*
